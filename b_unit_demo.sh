@@ -1,8 +1,6 @@
 #!/usr/bin/bash
 
-root="$BASH_OPT/b_unit"
-
-source $root/b_unit.sh
+source $BASH_LIB/b_unit/b_unit.sh
 
 
 function @test.testOne.example() {
