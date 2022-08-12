@@ -1,8 +1,8 @@
 root="$BASH_OPT/b_unit"
 
-source $BASH_LIB/language/util.sh
-source $BASH_LIB/b_unit/b_unit_assert.sh
-source $BASH_LIB/b_unit/b_unit_ui.sh
+@import util.sh
+@import b_unit_assert.sh
+@import b_unit_ui.sh
 
 function bUnit.test() {
     local decription="$1"
