@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-source $BASH_LIB/b_unit/b_unit.sh
+@import b_unit.sh
 
 
 function @test.testOne.example() {
