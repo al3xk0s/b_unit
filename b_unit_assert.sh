@@ -2,7 +2,7 @@ export B_UNIT_GROUP_PATTERN="[a-zA-Z0-9_]*"
 
 function bUnit._getTestPrefixPattern() {
     local groupPattern="$1"
-    echo "@test\\.${groupPattern}\\."
+    echo "test\\.${groupPattern}\\."
 }
 
 export B_UNIT_TEST_PREFIX_PATTERN="$(bUnit._getTestPrefixPattern "${B_UNIT_GROUP_PATTERN}")"

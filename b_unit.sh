@@ -1,8 +1,8 @@
 root="$BASH_OPT/b_unit"
 
-@import util.sh
-@import b_unit_assert.sh
-@import b_unit_ui.sh
+import util.sh
+import b_unit_assert.sh
+import b_unit_ui.sh
 
 function bUnit.test() {
     local decription="$1"
@@ -47,7 +47,7 @@ function bUnit._getGroupsOfTest() {
     local dotIndex
 
     for item in ${@:2}; do
-        group="$(echo "$item" | sed 's|@test\.||g')"
+        group="$(echo "$item" | sed 's|test\.||g')"
         dotIndex="$(expr index "$group" '.')"
         group="${group:0:dotIndex-1}"
 
@@ -75,7 +75,7 @@ function bUnit.runTestGroups() {
     for group in ${groups[@]}; do
         bUnit.showGroupName "$group"
         for testcase in ${tests[@]}; do            
-            if [[ ! "$testcase" =~ (@test.${group}\.) ]]; then
+            if [[ ! "$testcase" =~ (test.${group}\.) ]]; then
                 continue
             fi
             testOut="$(bUnit.test "$testcase")"
